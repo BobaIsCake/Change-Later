@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+    <title>Pressing Buttons</title>
+
+    <h1 id="title"> Are You More Of An All Click, No Read Person? </h1>
+    <li id="menu"><a href="index.html" id="menu">Back To The Home Page</a></li>
+    <li id="menu"><a href="pizza.html" id="menu">Maybe You're Like Food. Try This</a></li>
+    <li id="menu"><a href="wishlist.html" id="menu">Wish List</a></li>
+
+</head>
+
+<body>
+    <div id="inputWords">
+        <ul>
+            <li><input type="text" id="adj1"/><li>Adjective then a season</li>
+            <li><input type="text" id="name"/><li>your name</li>
+            <li><input type="text" id="verbing"/><li>Verb (Ending in "-ing")</li>
+            <li><input type="text" id="room"/><li>Room in a house</li>
+            <li><input type="text" id="color"/><li>A color/colour</li>
+            <li><input type="text" id="plunoun"/><li>Plural Noun</li>
+            <li><input type="text" id="pastVerb"/><li>Adverb</li>
+            <li><input type="text" id="drink"/><li>drink</li>
+            <li><input type="text" id="pet"/><li>pet</li>
+            <li><input type="text" id="action"/><li>Verb</li>
+            <li><input type="text" id="snack"/><li>Snack</li>
+            <li><input type="text" id="actionpt2"/><li>New Verb</li>
+            <li><input type="text" id="sameSnack"/><li>Same snack as before</li>
+
+            <!--put ther input fields here-->
+
+        </ul>
+    
+        <div id="buttonDiv">
+            <br>
+            <button id="replaceButton">Replace It</button>
+        </div>
+        </div>
+    
+    
+    <div id="story"></div>
+    <script>
+        var replaceButton = 
+                        document.getElementById("replaceButton");
+        replaceButton.addEventListener("click", replaceIt)
+
+        function replaceIt() {
+            var storyDiv = document.getElementById("story");
+            var adj1 = "<span class= 'replacement'>" + document.getElementById ("adj1") . value + "</span>";
+            var verbing = "<span class= 'replacement'>" + document.getElementById ("verbing") . value + "</span>";
+            var name = "<span class= 'replacement'>" + document.getElementById ("name") . value + "</span>";
+            var room = "<span class= 'replacement'>" + document.getElementById ("room") . value + "</span>";
+            var color = "<span class= 'replacement'>" + document.getElementById ("color") . value + "</span>";
+            var plunoun = "<span class= 'replacement'>" + document.getElementById ("plunoun") . value + "</span>";
+            var pastVerb = "<span class= 'replacement'>" + document.getElementById ("pastVerb") . value + "</span>";
+            var drink = "<span class= 'replacement'>" + document.getElementById ("drink") . value + "</span>";
+            var pet = "<span class= 'replacement'>" + document.getElementById ("pet") . value + "</span>";
+            var action = "<span class= 'replacement'>" + document.getElementById ("action") . value + "</span>";
+            var snack = "<span class= 'replacement'>" + document.getElementById ("snack") . value + "</span>";
+            var actionpt2 = "<span class= 'replacement'>" + document.getElementById ("actionpt2") . value + "</span>";
+            var sameSnack = "<span class= 'replacement'>" + document.getElementById ("sameSnack") . value + "</span>";
+
+        // Insert more variable definitions here //
+
+        var theStory = name + "'s" + " <h1> Random Day </h1>";
+        theStory += "One " + adj1 + " day,";
+        theStory += name + " was " + verbing;
+        theStory += " in his/her " + room;
+        theStory += ", while reading a book about " + color;
+        theStory += " " + plunoun + " .<br><br>";
+        theStory += " As " + name + " walked by he/she " + pastVerb;
+        theStory += " dumped his/her " + drink;
+        theStory += " on his/her " +  pet  + ", " + name;
+        theStory +=  " then " + action;
+        theStory += " out of the building. ";
+        theStory += " There were a bunch of " + snack;
+        theStory += " on the front porch. He/She " + actionpt2;
+        theStory += " while eating his " + sameSnack + ".";
+        storyDiv.innerHTML = theStory;
+        }
+    </script>
+    
+    <br>
+
+     <p>Also before you see the story you'll need to fill in all the boxes.</p>
+     <img src="edwfew.jpg" alt="Elephant"> 
+     <br>
+     <p>...because it's cute</p>
+</body>
+
+</html>
+
